@@ -53,11 +53,37 @@ void setup(){
   }
  
   // Mostrar mensaje de exito y dirección IP asignada
-  Serial.println();
+  Serial.println("Conectado correctamente");
   Serial.print("Conectado a:\t");
   Serial.println(WiFi.SSID()); 
   Serial.print("IP address:\t");
   Serial.println(WiFi.localIP());
+  Serial.print("Hostname:\t");
+  Serial.println(WiFi.hostname());
+  Serial.print("Subnetmask:\t");
+  Serial.println(WiFi.subnetMask());
+  Serial.print("Gateway:\t");
+  Serial.println(WiFi.gatewayIP());
+  Serial.print("MAC:\t");
+  Serial.println(WiFi.macAddress());  
+  Serial.print("DNS:\t");
+  Serial.println(WiFi.dnsIP());
+
+/*
+================================================
+    Gestión de la conexión
+================================================
+    WiFi.reconnect();
+    WiFi.disconnect(true);
+    WiFi.isConnected();
+    WiFi.setAutoConnect(autoConnect);
+    WiFi.status();
+================================================
+*/
+
+
+//WiFi.dnsIP(dns_no);
+  
 }
  
 void loop() {}
